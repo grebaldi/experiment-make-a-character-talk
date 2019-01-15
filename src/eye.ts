@@ -37,7 +37,7 @@ export class Eye extends Container {
      */
     private _eyePosition : EyePosition = EyePosition.LEFT;
     public get eyePosition() : EyePosition {
-        return this._eyePosition;    
+        return this._eyePosition;
     }
     public set eyePosition(eyePosition: EyePosition) {
         this._eyePosition = eyePosition;
@@ -118,7 +118,7 @@ export class Eye extends Container {
         return this._mood;
     }
     public set mood(mood: Mood) {
-        
+
         if (this._eyeBall.texture.baseTexture.hasLoaded) {
             this._mood = mood;
 

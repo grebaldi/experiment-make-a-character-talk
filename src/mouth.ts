@@ -12,7 +12,7 @@ export class Mouth extends Sprite {
     public set phoneme(phoneme: Phoneme) {
         if (this.texture.baseTexture.hasLoaded) {
             this._phoneme = phoneme;
-    
+
             switch (this._phoneme) {
                 default:
                 case 'mm':
@@ -80,24 +80,24 @@ export class Mouth extends Sprite {
             case syllable.startsWith('n'):
             case syllable.startsWith('q'):
             case syllable.startsWith('t'):
-            case syllable.startsWith('x'): 
+            case syllable.startsWith('x'):
                 this.phoneme = 'nn';
                 break;
-            
+
             case syllable.startsWith('c'):
             case syllable.startsWith('s'):
             case syllable.startsWith('z'):
             case syllable.startsWith('e'):
                 this.phoneme = 'ee';
                 break;
-            
+
             case syllable.startsWith('a'):
             case syllable.startsWith('i'):
             case syllable.startsWith('r'):
                 this.phoneme = 'aa';
                 break;
 
-            case syllable.startsWith('o'): 
+            case syllable.startsWith('o'):
                 this.phoneme = 'oo';
                 break;
 
@@ -118,7 +118,7 @@ export class Mouth extends Sprite {
 
             case syllable.includes('a'):
             case syllable.includes('i'):
-                this.phoneme = 'ee';
+                this.phoneme = 'aa';
                 break;
 
             case syllable.includes('o'):

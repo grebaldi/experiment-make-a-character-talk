@@ -24,9 +24,12 @@ face.leftEye.position.set(0, 4);
 face.rightEye.position.set(80, -7);
 face.mouth.position.set(60, 108);
 
-face.lookingDirection = LookingDirection.LEFT;
+face.lookingDirection = LookingDirection.FORWARD;
 face.eyesOpen = true;
 
+setTimeout(() => {
+    face.mood = Mood.ANGRY;
+}, 200);
 
 const view = document.getElementById('app');
 if (view !== null) {
@@ -40,7 +43,7 @@ const input = <HTMLInputElement>document.getElementById('text');
 if (button !== null && input !== null) {
     button.addEventListener('click', () => {
         const msg = new SpeechSynthesisUtterance();
-
+        msg.rate = .8;
         msg.text = input.value;
 
         application.ticker.add(face.mouth.sayPhrase(input.value).next);
